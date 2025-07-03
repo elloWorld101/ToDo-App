@@ -1,7 +1,6 @@
 const mongooseUrl = require("../config");
 const mongoose = require("mongoose");
 
-console.log(mongooseUrl.mongooseUrl);
 mongoose.connect(mongooseUrl.mongooseUrl);
 
 const todoSchema = mongoose.Schema({
