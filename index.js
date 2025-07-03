@@ -1,15 +1,7 @@
 const express = require("express");
-const app = express();
-const cors = require("cors");
-const MainRouter = require("./routes/index");
+const router = express.Router();
+const todoRouter = require("./todoRouter");
 
-app.use(express.json());
-app.use(cors());
+router.use("/todo", todoRouter);
 
-app.use("/api/v1", MainRouter);
-
-
-app.listen(3000, function(){
-    console.log("listening on port 3000");
-})
-
+module.exports = router;
